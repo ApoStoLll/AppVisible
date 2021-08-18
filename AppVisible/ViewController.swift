@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         Repository().getAllApps()
         // Do any additional setup after loading the view.
+        // pkek app code for petukhov
     }
 
 
