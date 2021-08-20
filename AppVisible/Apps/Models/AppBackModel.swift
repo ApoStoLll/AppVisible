@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppBackModel{
-    let appId: String
+    let appPackage: String
     let appName: String
     let organic: String
     let status: String

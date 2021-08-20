@@ -21,7 +21,7 @@ class AppsPresenter{
 extension AppsPresenter : AppsPresentationLogic{
     func presentData(data: [AppBackModel]) {
         let viewModel = data.map{ model -> AppCellModel in
-            let cellModel = AppCellModel(appId: Int(model.appId) ?? 0, appName: model.appName, organic: true, isShowed: false)
+            let cellModel = AppCellModel(appPackage: model.appPackage, appName: model.appName, organic: true, isShowed: false)
             return cellModel
         }
         viewController?.displayData(data: viewModel)

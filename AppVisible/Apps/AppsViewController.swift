@@ -59,6 +59,7 @@ class AppsViewController: UIViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(UINib(nibName: "AppCell", bundle: nil), forCellReuseIdentifier: AppCell.cellIdentifier)
+        
     }
 
 }
@@ -78,6 +79,7 @@ extension AppsViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: AppCell.cellIdentifier,for: indexPath) as? AppCell
         else {return UITableViewCell()}
         cell.setup(data: dataToDisplay[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -88,8 +90,18 @@ extension AppsViewController: UITableViewDataSource, UITableViewDelegate{
     
 }
 
-extension AppsViewController : AppsDisplayLogic{
-    func displayData(data : [AppCellModel]) {
+extension AppsViewController: AppCellDeligate{
+    func changeOrganicTap(appPackage: String, organic: Bool) {
+        interactor?.changeOrganic(appPackage: appPackage, organic: organic)
+    }
+    func changeVisibleTap(appPackage: String, isShow: Bool) {
+        interactor?.changeVisibile(appPackage: appPackage, visible: isShow)
+    }
+    
+}
+
+extension AppsViewController: AppsDisplayLogic{
+    func displayData(data: [AppCellModel]) {
         dataToDisplay.removeAll()
         dataToDisplay.append(contentsOf: data)
         tableView.reloadData()

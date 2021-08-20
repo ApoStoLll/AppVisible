@@ -24,9 +24,15 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVL-Wq-aek">
                         <rect key="frame" x="333" y="16" width="51" height="30"/>
+                        <connections>
+                            <action selector="visibleChangedSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Xae-4g-gOb"/>
+                        </connections>
                     </switch>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsq-IG-aCs">
                         <rect key="frame" x="268" y="16" width="51" height="30"/>
+                        <connections>
+                            <action selector="organicChangedSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="KQa-kn-nrD"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>

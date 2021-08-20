@@ -9,7 +9,7 @@ import Foundation
 
 
 struct AppCellModel{
-    let appId: Int
+    let appPackage: String
     let appName: String
     let organic: Bool
     let isShowed: Bool
