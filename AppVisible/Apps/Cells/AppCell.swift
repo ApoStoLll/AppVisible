@@ -13,8 +13,11 @@ class AppCell: UITableViewCell {
    
     
     @IBOutlet weak var appNameText: UILabel!
+    
     @IBOutlet weak var organicSwitch: UISwitch!
+    
     @IBOutlet weak var isShowedSwitch: UISwitch!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

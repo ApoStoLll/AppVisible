@@ -17,7 +17,7 @@
 		87E28EBB26CD48C700852DA5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 87E28EBA26CD48C700852DA5 /* Alamofire */; };
 		9720C94D26D036F900DF94A4 /* AppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9720C94B26D036F900DF94A4 /* AppCell.xib */; };
 		978E430026D040350003A074 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720C94A26D036F900DF94A4 /* AppCell.swift */; };
-		9795C57826CFBE87006EF5E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9795C57726CFBE87006EF5E5 /* Main.storyboard */; };
+		9795C57826CFBE87006EF5E5 /* AppsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9795C57726CFBE87006EF5E5 /* AppsViewController.storyboard */; };
 		9795C57A26CFC247006EF5E5 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795C57926CFC247006EF5E5 /* AppsViewController.swift */; };
 		9795C57E26CFC573006EF5E5 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795C57D26CFC573006EF5E5 /* AppsPresenter.swift */; };
 		9795C58026CFC69D006EF5E5 /* AppsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9795C57F26CFC69D006EF5E5 /* AppsInteractor.swift */; };
@@ -37,7 +37,7 @@
 		87E28EB326CD42B200852DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9720C94A26D036F900DF94A4 /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		9720C94B26D036F900DF94A4 /* AppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppCell.xib; sourceTree = "<group>"; };
-		9795C57726CFBE87006EF5E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9795C57726CFBE87006EF5E5 /* AppsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppsViewController.storyboard; sourceTree = "<group>"; };
 		9795C57926CFC247006EF5E5 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		9795C57D26CFC573006EF5E5 /* AppsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
 		9795C57F26CFC69D006EF5E5 /* AppsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsInteractor.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				9795C58C26CFEBE9006EF5E5 /* Models */,
 				9795C58326CFE711006EF5E5 /* Cells */,
-				9795C57726CFBE87006EF5E5 /* Main.storyboard */,
+				9795C57726CFBE87006EF5E5 /* AppsViewController.storyboard */,
 				9795C57926CFC247006EF5E5 /* AppsViewController.swift */,
 				9795C57D26CFC573006EF5E5 /* AppsPresenter.swift */,
 				9795C57F26CFC69D006EF5E5 /* AppsInteractor.swift */,
@@ -193,7 +193,7 @@
 			files = (
 				87E28EB226CD42B200852DA5 /* LaunchScreen.storyboard in Resources */,
 				9720C94D26D036F900DF94A4 /* AppCell.xib in Resources */,
-				9795C57826CFBE87006EF5E5 /* Main.storyboard in Resources */,
+				9795C57826CFBE87006EF5E5 /* AppsViewController.storyboard in Resources */,
 				87E28EAF26CD42B200852DA5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
