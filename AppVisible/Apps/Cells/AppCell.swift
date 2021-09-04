@@ -51,7 +51,7 @@ class AppCell: UITableViewCell {
     
     func setup(data: AppCellModel){
         appPackage = data.appPackage
-        appNameText.text = data.appName
+        appNameText.text = "\(data.appId) | \(data.appName)"
         organicSwitch.isOn = data.organic
         isShowedSwitch.isOn = data.isShowed
     }

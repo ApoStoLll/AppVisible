@@ -13,4 +13,5 @@ struct AppCellModel{
     let appName: String
     let organic: Bool
     let isShowed: Bool
+    let appId: String
 }

@@ -28,7 +28,7 @@ class Repository {
         //todo request to db
         let param = ["app_package": appPackage, "status": status]
         AF.request("https://api.turgon.space/changeStatus", method: HTTPMethod.post, parameters: param, encoding: JSONEncoding.default)
-                .response{ response in
+                .responseData{ response in
                     print(response)
                 }
     }

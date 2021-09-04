@@ -50,6 +50,13 @@ extension AppsInteractor : AppsBusinessLogic{
     
     func changeVisibile(appPackage: String, visible: Bool) {
         //request change visible by package
-        print("here3")
+        if(visible){
+            //request organic true by package
+            repository?.changeStatus(appPackage: appPackage, status: "live")
+        }
+        else{
+            //request organic false by package
+            repository?.changeStatus(appPackage: appPackage, status: "metka")
+        }
     }
 }
