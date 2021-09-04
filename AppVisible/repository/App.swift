@@ -11,4 +11,6 @@ struct Apps : Decodable {
 struct App : Decodable {
     let appPackage : String?
     let organic : Bool?
+    let appName : String?
+    let status : String?
 }

@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol AppsPresentationLogic {
-    func presentData(data: [AppBackModel])
+    func presentData(data: [App])
 }
 
 class AppsPresenter{
@@ -19,10 +19,15 @@ class AppsPresenter{
 
 //MARK: - Presentation logic
 extension AppsPresenter : AppsPresentationLogic{
-    func presentData(data: [AppBackModel]) {
-        let viewModel = data.map{ model -> AppCellModel in
-            let cellModel = AppCellModel(appPackage: model.appPackage, appName: model.appName, organic: true, isShowed: false)
-            return cellModel
+    func presentData(data: [App]) {
+        let viewModel = data
+                .filter { app in
+                    app.organic != nil && app.status != nil && app.appPackage != nil && app.appName != nil && (app.status == "live" || app.status == "metka" || app.status == "off")
+                }
+                .map{ model -> AppCellModel in
+                    let isShowed = model.status == "live" ? true : false
+                    let cellModel = AppCellModel(appPackage: model.appPackage!, appName: model.appName!, organic: model.organic!, isShowed: isShowed)
+                    return cellModel
         }
         viewController?.displayData(data: viewModel)
     }

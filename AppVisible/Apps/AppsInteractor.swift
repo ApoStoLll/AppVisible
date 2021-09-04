@@ -16,27 +16,35 @@ protocol AppsBusinessLogic {
 
 class AppsInteractor{
     var presenter: AppsPresentationLogic?
+    var repository: Repository?
+    
+    init() {
+        repository = Repository()
+    }
 }
 
 extension AppsInteractor : AppsBusinessLogic{
     
     func fetchApps() {
         //change it (get from server)
-        var backResponse = [AppBackModel]()
-        let model = AppBackModel(appPackage: "com.s.f", appName: "Lucky Day", organic: "true", status: "live")
-        backResponse.append(model)
-        backResponse.append(model)
-        self.presenter?.presentData(data: backResponse)
+        repository?.getAllApps{ (apps) in
+            self.presenter?.presentData(data: apps ?? [App]())
+        }
+//        var backResponse = [AppBackModel]()
+//        let model = AppBackModel(appPackage: "com.s.f", appName: "Lucky Day", organic: "true", status: "live")
+//        backResponse.append(model)
+//        backResponse.append(model)
+//        self.presenter?.presentData(data: backResponse)
     }
     
     func changeOrganic(appPackage: String, organic: Bool) {
         if(organic){
             //request organic true by package
-            print("here1")
+            repository?.organicOn(appPackage: appPackage)
         }
         else{
             //request organic false by package
-            print("here2")
+            repository?.organicOff(appPackage: appPackage)
         }
     }
     
