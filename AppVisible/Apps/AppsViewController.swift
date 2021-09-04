@@ -20,6 +20,7 @@ class AppsViewController: UIViewController {
     
     
     // MARK: Internal vars
+    private let refreshControl = UIRefreshControl()
     private var interactor: AppsBusinessLogic?
     private var dataToDisplay = [AppCellModel]()
     
@@ -49,10 +50,17 @@ class AppsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
         interactor?.fetchApps()
         // Do any additional setup after loading the view.
     }
-    
+
+    @objc func refresh(_ sender: AnyObject) {
+        interactor?.fetchApps()
+        refreshControl.endRefreshing()
+    }
 
     private func configureTableView(){
         tableView.dataSource = self
