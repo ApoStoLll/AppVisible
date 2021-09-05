@@ -40,6 +40,7 @@ extension AppsPresenter : AppsPresentationLogic{
                     )
                     return cellModel
         }
+        print(data)
         viewController?.displayData(data: viewModel)
     }
     

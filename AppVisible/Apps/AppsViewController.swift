@@ -50,7 +50,7 @@ class AppsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        //refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
         interactor?.fetchApps()
